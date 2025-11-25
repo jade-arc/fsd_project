@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance Management System</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>📊 Attendance Management System</h1>
+    <h3>Track Students Above 70%</h3>
+
+    <form id="attendanceForm">
+      <input type="text" id="name" placeholder="Enter Student Name" required>
+      <input type="number" id="attended" placeholder="Classes Attended" min="0" required>
+      <input type="number" id="total" placeholder="Total Classes" min="1" required>
+      <button type="submit">Add Attendance</button>
+    </form>
+
+    <table id="studentTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Attended</th>
+          <th>Total</th>
+          <th>Percentage</th>
+          <th>Status</th>
+          <th>Chart</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div class="chart-container">
+      <canvas id="attendanceChart"></canvas>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
